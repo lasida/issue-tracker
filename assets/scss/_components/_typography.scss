@@ -1,0 +1,27 @@
+h1{
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+h3{
+    @extend %font-24;
+}
+
+h4{
+    @extend %font-20;
+}
+
+h5{
+    @extend %font-18;
+}
+
+h6{
+    @extend %font-16;
+}

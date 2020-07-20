@@ -1,0 +1,178 @@
+.btn{
+    @extend %font-14;
+    border-radius: 0px;
+    padding: 10px 15px;
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+    font-weight: 500;
+
+    &.btn-sm{
+        padding: 5px 10px;
+        @extend %font-12;
+    }
+
+    &.btn-lg{
+        font-size: 18px;
+    }
+
+    &.btn-primary{
+        background-color: $primary;
+        border-color: $primary;
+        color: $secondary;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($primary, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($primary, 10%) !important;
+            color: $secondary;
+        }
+    }
+
+    &.btn-transparent{
+        background-color: transparent;
+        border-color: transparent;
+        color: $black;
+        padding: 5px;
+
+        &:hover, &:focus, &:active{
+            border-color: transparent !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+            color: $success;
+        }
+    }
+
+    &.btn-pink{
+        background-color: $pink;
+        border-color: $pink;
+        color: $white;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($pink, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($pink, 10%) !important;
+            color: $white;
+        }
+    }
+
+    &.btn-secondary{
+        background-color: $secondary;
+        border-color: $secondary;
+        color: $primary;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($secondary, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($secondary, 10%) !important;
+            color: $primary;
+        }
+    }
+
+    &.btn-outline-primary{
+        background-color: transparent;
+        border-color: $primary;
+        color: $primary;
+        border-width: 2px;
+
+        &:hover, &:focus, &:active{
+            border-color: $primary !important;
+            box-shadow: none !important;
+            background-color: $primary !important;
+            color: $white;
+        }
+    }
+
+    &.btn-outline-secondary{
+        background-color: transparent;
+        border-color: $secondary;
+        color: $secondary;
+
+        &:hover, &:focus, &:active{
+            border-color: $secondary !important;
+            box-shadow: none !important;
+            background-color: $secondary !important;
+            color: $primary;
+        }
+    }
+
+    &.btn-outline-dark{
+        background-color: transparent;
+        border-color: #e5e5e5;
+        color: $black;
+
+        &:hover, &:focus, &:active{
+            border-color: #e5e5e5 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+            color: $black;
+        }
+    }
+
+    &[data-toggle="collapse"]{
+        padding-right: 40px;
+        position: relative;
+
+        &:after{
+            width: 20px;
+            height: 17px;
+            right: 15px;
+            position: absolute;
+            content: "";
+            top: 48%;
+            transform: translateY(-50%);
+            background-size: cover;
+        }
+    }
+
+    &[aria-expanded="false"]{
+        &:after{
+            background-image: url('../img/icons/chevron-down-white.svg');
+        }
+    }
+
+    &[aria-expanded="true"]{
+        &:after{
+            background-image: url('../img/icons/chevron-up-white.svg');
+        }
+    }
+
+    &.btn-link{
+        border: none;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.toggle-collapse{
+    cursor: pointer;
+    &[data-toggle="collapse"]{
+        position: relative;
+
+        &:after{
+            width: 11px;
+            height: 6px;
+            right: 0;
+            position: absolute;
+            content: "";
+            top: 48%;
+            transform: translateY(-50%);
+            background-size: cover;
+        }
+    }
+
+    &[aria-expanded="false"]{
+        &:after{
+            background-image: url('../img/icons/chevron-down.png');
+        }
+    }
+
+    &[aria-expanded="true"]{
+        &:after{
+            background-image: url('../img/icons/chevron-up.png');
+        }
+    }
+}

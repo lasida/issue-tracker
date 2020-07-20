@@ -1,0 +1,32 @@
+/*!
+ =========================================================
+ * Lasida 25-03-20
+ * Teguh Rianto
+ * https://github.com/teguhrianto
+ =========================================================
+ */
+html, body{
+  height: 100%;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+.lasida{
+  margin: 0;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+  font-size: 14px;
+
+  @import '_components/color';
+  @import '_components/grid';
+  @import '_components/mixins';
+  @import '_components/utilities';
+  @import '_components/buttons';
+  @import '_components/typography';
+  @import '_components/table';
+  @import '_components/global';
+  @import '_components/card';
+  @import '_components/form';
+  @import '_components/landing';
+}

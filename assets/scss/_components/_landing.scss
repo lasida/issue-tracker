@@ -1,0 +1,221 @@
+.issues{
+  &-type{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    @include device(mobile){
+      display: none;
+    }
+  }
+
+  &-list{
+    li{
+      display: block;
+      width: 100%;
+      border-left: 4px solid $green;
+      padding: 10px;
+      background-color: $white;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 7px;
+    }
+    &-header{
+      h6{
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $black;
+
+        .date{
+          display: block;
+          font-size: 11px;
+          line-height: 13px;
+          color: rgba($black, 0.5);
+        }
+      }
+
+      &-action{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+
+        li{
+          background-color: transparent;
+          font-size: 20px;
+          padding: 5px;
+          border-left: none;
+          margin-bottom: 0;
+          flex: 0;
+
+          a{
+            &[data-toggle="collapse"]{
+              display: block;
+              &:after{
+                content: "";
+                width: 12px;
+                height: 10px;
+                background-image: url('../img/icons/chevron-down-outline.svg');
+                background-size: cover;
+                opacity: 0.5;
+                transition: all 0.3s ease-in-out;
+                display: block;
+                position: relative;
+                top: -2px;
+              }
+
+              &[aria-expanded="true"]{
+                &:after{
+                  transform-origin: center;
+                  transform: rotate(180deg);
+                }
+              }
+
+              &.light{
+                &:after{
+                  background-image: url('../img/icons/chevron-down-outline-white.svg');
+                  opacity: 1;
+                  width: 16px;
+                  height: 14px;
+                }
+              }
+            }
+          }
+
+          .badge{
+            width: 27px;
+            height: 27px;
+            flex: 0 0 27px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: $white;
+            background-color: $pink;
+            border-radius: 50%;
+          }
+
+          + li{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    &-body{
+      &.show{
+        padding-top: 10px;
+      }
+      p{
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 10px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+      &-action{
+        a{
+          font-size: 14px;
+        }
+      }
+
+      &-checklist{
+        border-top: 1px solid #EFEFEF;
+        margin-top: 5px;
+        padding-top: 10px;
+
+        .form-group{
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &-chat{
+      margin: 0;
+      li{
+        padding: 0;
+        margin-bottom: 2px;
+      }
+      .issues-list{
+        &-header{
+          background-color: $success;
+          padding: 7px 15px;
+          h6{
+            font-size: 18px;
+            color: $white;
+          }
+        }
+
+        &-action{
+          li{
+            padding: 5px;
+          }
+        }
+      }
+    }
+
+    &-wa{
+      max-height: 150px;
+      position: relative;
+      padding: 10px 15px;
+
+      &-bubble{
+        max-width: 80%;
+        padding: 7px 12px;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $wa;
+        margin-left: auto;
+        margin-bottom: 5px;
+
+        p{
+          font-size: 14px;
+          color: $black;
+          margin-bottom: 0;
+        }
+
+        &-meta{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .date{
+            font-size: 11px;
+            color: rgba($black, 0.5);
+          }
+          .info{
+            color: #5a5a5a;
+            margin-left: 5px;
+            font-size: 13px;
+
+            a{
+              color: #5a5a5a;
+            }
+          }
+        }
+
+        &.sent{
+          margin-left: unset;
+          background-color: #eee;
+        }
+      }
+
+      &-form{
+        padding: 0 15px;
+        .form-control{
+          background-color: $white;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
