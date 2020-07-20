@@ -1,3 +1,3 @@
 # Issues Manager
 
-Aplikasi dengan sistem penyimpan di browser masing-masing pengguna, semi PWA
+Aplikasi manajer masalah dengan sistem penyimpan di browser masing-masing pengguna, semi PWA
